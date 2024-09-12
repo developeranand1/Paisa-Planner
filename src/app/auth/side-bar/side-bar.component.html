@@ -1,0 +1,68 @@
+<section class="bg-color">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="side-bar"  [ngClass]="{'hide-sidebar': !isSidebarOpen}">
+                    
+                    <div class="d-flex justify-content-between align-items-center mx-2">
+                        <div class="paisa-planner-title">Paisa Planner   </div>
+                    <div>
+                        <i class="fa-solid fa-xmark " *ngIf="isSidebarOpen" (click)="closeSidebar()"></i>
+                    </div>
+                  
+                    </div>
+                    <div class="link-list">
+                        <div class="side-link" routerLink="/user/dashboard" >
+                            <a class="links" routerLink="/user/dashboard"><i class="fa-solid fa-house"></i>
+                                Dashboard</a>
+                        </div>
+                        <div class="side-link" routerLink="/user/add-expense">
+                            <a class="links" routerLink="/user/add-expense"><i class="fa-solid fa-circle-plus"></i> Add
+                                Expense</a>
+                        </div>
+                        <div class="side-link" routerLink="/user/add-income">
+                            <a routerLink="/user/add-income" class="links"><i class="fa-solid fa-dollar-sign"></i> Add
+                                Income</a>
+                        </div>
+
+                        <div class="side-link" routerLink="/user/add-subscription">
+                            <a class="links" routerLink="/user/add-subscription"><i
+                                    class="fa-solid fa-clipboard-list"></i> Add Subscription</a>
+                        </div>
+
+                        <div class="side-link" routerLink="/user/add-category">
+                            <a class="links" routerLink="/user/add-category"><i class="fa-solid fa-user"></i> Add
+                                Categories</a>
+                        </div>
+
+                        <div class="side-link" routerLink="/user/settings">
+                            <a class="links" routerLink="/user/settings"><i class="fa-solid fa-gear"></i> Settings</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9">
+
+
+                <div class="card">
+                    <div class="card-heading">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <i (click)="toggleSidebar()" class="fa-solid fa-bars"></i>  
+                            </div>
+                            <div *ngIf="userName">
+                                 Welcome {{userName}} to Paisa Planner
+                            </div>
+                        </div>
+                        <div>
+                            <a (click)="onLogout()" > <i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <router-outlet />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

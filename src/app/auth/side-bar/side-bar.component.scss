@@ -1,0 +1,98 @@
+.bg-color{
+    background-color: var(--dashboard-bg);
+    padding: 20px 0px 23px 0px;
+}
+
+.side-bar {
+    background: var(--blue);
+    color:var(--white);
+    border-radius: 15px;
+    
+}
+
+.side-link {
+    border: 1px solid;
+    padding: 14px;
+    margin-bottom:10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.side-link .links{
+    color: var(--white);
+    text-decoration: none;
+}
+
+.side-link .links i{
+    padding-right: 10px;
+}
+
+.paisa-planner-title {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    padding: 24px 0px;
+}
+
+.link-list {
+    padding: 10px;
+}
+
+
+
+.card-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.card-body{
+    background-color: #ddd;
+    height: 440px;
+    overflow-y: scroll;
+}
+
+
+.card {
+    border-radius: 15px;
+}
+
+.fa-xmark{
+    display: none;
+}
+
+.fa-bars{
+    display: none;
+}
+ 
+a{
+    cursor: pointer;
+}
+
+.hide-sidebar {
+    display: none;  
+  }
+
+  
+  @media screen and (max-width: 768px) {
+    .side-bar {
+      position: absolute;
+      z-index: 10;
+      width: 250px;
+      transition: transform 0.3s ease-in-out;
+    }
+  
+    .hide-sidebar {
+      transform: translateX(-100%);
+    }
+  
+    .fa-xmark {
+      display: block;
+    }
+  
+    .fa-bars {
+      display: block;
+      margin-right: 12px;
+    }
+  }

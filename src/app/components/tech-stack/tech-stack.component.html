@@ -1,0 +1,22 @@
+<section>
+    <div class="container">
+       <div class="row">
+        <div class="col-md-12">
+            <div class="tech-title">
+                Tech Stack
+            </div>
+        </div>
+       </div>
+       <marquee behavior="" direction=""> 
+       <div class="row mb-4">
+        <div class="col-2"  *ngFor="let item of techList">
+          <div  class="tech-group">
+            <img [src]="item.image" [alt]="item.title">
+            <div class="tech-about">{{item.title}}</div>
+        </div>
+        </div>
+       </div>
+       </marquee>
+    </div>
+  
+</section>

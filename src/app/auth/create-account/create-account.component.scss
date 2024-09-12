@@ -1,0 +1,73 @@
+.left-side{
+    background-color: #22489b;
+    padding: 20px 0px;
+    text-align: center;
+    height: 100vh;
+}
+.paisa-planner-title {
+    color: #fff;
+    font-weight: 700;
+    font-size: 37px;
+
+}
+
+.planner-img{
+    max-width: 400px;
+    border-radius: 20px;
+}
+
+.form-section {
+    margin-bottom: 10px;
+}
+
+
+.error-message{
+    color: red;
+}
+
+
+button.create-btn {
+    background: var(--blue);
+    color: var(--white);
+    border: none;
+    width: 100%;
+    padding: 7px;
+    border-radius: 25px;
+    margin-top: 10px;
+}
+
+
+input.form-control {
+    padding-left: 24px;
+    border-radius: 25px;
+}
+
+.create-about {
+    font-size: 15px;
+    color: var(--blue);
+    line-height: 25px;
+}
+
+.create-title {
+    font-size: 25px;
+    font-weight: 700;
+    margin: 10px 0px;
+}
+
+@media screen and (max-width:768px) {
+    .left-side{
+        display: none;
+    }
+
+    .right-side{
+        margin: 20px;
+        border: 1px solid #22489b;
+        padding: 20px;
+        border-radius: 5px;
+    }
+
+    .create-title,
+    .create-about{
+        text-align: center;
+    }
+}

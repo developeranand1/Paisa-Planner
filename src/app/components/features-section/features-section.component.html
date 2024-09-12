@@ -1,0 +1,25 @@
+<section>
+   <div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="feature-heading">
+                Features
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6"  *ngFor="let item of featureList">
+            <div class="card mb-4">
+                <div class="card-body">
+                  <h5 class="card-title"><span class="material-symbols-outlined"> {{item.icons}}</span></h5>
+                  <h6 class="card-subtitle mb-2 ">{{item.heading}}</h6>
+                  <p class="card-text">{{item.about}} </p>
+    
+                </div>
+              </div>
+        </div>
+    </div>
+   </div>
+   
+</section>

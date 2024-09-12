@@ -1,0 +1,78 @@
+<table class="table">
+    <thead class="table-dark">
+      <tr>
+        <th scope="col">NAME</th>
+        <th scope="col">AMOUNT</th>
+        <th scope="col">FREQUENCY</th>
+        <th scope="col">NEXT DUE DATE </th>
+        <th scope="col">CATEGORY</th>
+        <th scope="col">ACTION</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of subscriptionList">
+        <th >{{item?.name}} </th>
+        <td>{{item?.amount}}</td>
+        <td>{{item?.frequency}}</td>
+        <td>{{item?.nextDueDate}}</td>
+        <td>{{item?.category}}</td>
+        <td>
+          <a data-bs-toggle="modal" data-bs-target="#exampleModal"><span class="material-symbols-outlined"> edit_square </span></a>
+          <a><span class="material-symbols-outlined"> delete </span></a>
+        </td>
+      </tr>
+     
+    </tbody>
+  </table>
+  
+  
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Edit Subscription</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+       <div class="modal-body">
+          <form action="">
+            <div class="mb-2">
+                <label class="form-label">Name <span>*</span></label>
+                <input type="text" class="form-control">
+            </div>
+             <div class="mb-2">
+                <label class="form-label">Amount <span>*</span></label>
+                <input type="text" class="form-control">
+            </div>
+            <div class="mb-2">
+                <label class="form-label">Frequency <span>*</span></label>
+                <input type="text" class="form-control">
+            </div>
+
+            <div class="mb-2">
+                <label class="form-label">Next Due Date <span>*</span></label>
+                <input type="text" class="form-control">
+            </div>
+  
+               <div class="mb-2">
+                  <label class="form-label">Category <span>*</span></label>
+                  <select class="form-control">
+                      <option value="">Home</option>
+                      <option value="">Home</option>
+                      <option value="">Home</option>
+                      <option value="">Home</option>
+                  </select>
+                 
+              </div>
+               <div class="mb-3">
+                  <label class="form-label">Description <span>*</span></label>
+                  <textarea class="form-control"></textarea>
+              </div>
+              <div class="">
+                  <button type="submit" class="btn btn-primary form-control">Update Subscription</button>
+              </div>
+          </form>
+        </div>
+        
+      </div>
+    </div>
+  </div>

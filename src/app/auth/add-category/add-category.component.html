@@ -1,0 +1,53 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="add-title ">
+            Add Category
+        </div>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-md-12">
+        <button class="btn btn-primary my-3" data-bs-toggle="modal" data-bs-target="#exampleModal2">+ Add Category</button>
+    </div>
+</div>
+
+<app-category-list  />
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Add Category</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+     <div class="modal-body">
+        <form [formGroup]="categoryForm" (ngSubmit)="onAddCategory()">
+            <div class="mb-2">
+                <label class="form-label">Name <span>*</span></label>
+                <input type="text" class="form-control" formControlName="name">
+            </div>
+            
+
+             <div class="mb-2">
+                <label class="form-label">Type <span>*</span></label>
+                <select class="form-control" formControlName="type">
+                    <option value="Home">Select Type</option>
+                    <option [value]="item" *ngFor="let item of typeList">{{item}}</option>
+                </select>
+               
+            </div>
+            <div class="">
+                <button type="submit" class="btn btn-primary form-control">Add Expense</button>
+            </div>
+        </form>
+      </div>
+      
+    </div>
+  </div>
+</div>

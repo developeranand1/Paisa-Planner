@@ -1,0 +1,57 @@
+<table class="table">
+    <thead class="table-dark">
+      <tr>
+        <th scope="col">NAME</th>
+        <th scope="col">TYPE</th>
+       
+        <th scope="col">ACTION</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of categoryList;let i=index">
+       
+        <td>{{item.name}}</td>
+        <td>{{item.type}}</td>
+     
+        <td>
+          <a><span class="material-symbols-outlined" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="getCategoryData(item)"> edit_square </span></a>
+          <a><span class="material-symbols-outlined" (click)="onDelete(item._id)"> delete </span></a>
+        </td>
+      </tr>
+    
+    </tbody>
+  </table>
+  
+  
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Edit Category</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+       <div class="modal-body">
+        <form [formGroup]="categoryForm" (ngSubmit)="onUpdate()">
+          <div class="mb-2">
+              <label class="form-label">Name <span>*</span></label>
+              <input type="text" class="form-control" formControlName="name">
+          </div>
+          
+
+           <div class="mb-2">
+              <label class="form-label">Type <span>*</span></label>
+              <select class="form-control" formControlName="type">
+                  <option value="Home">Select Type</option>
+                  <option [value]="item" *ngFor="let item of typeList">{{item}}</option>
+              </select>
+             
+          </div>
+          <div class="">
+              <button type="submit" class="btn btn-primary form-control">Update Expense</button>
+          </div>
+      </form>
+        </div>
+        
+      </div>
+    </div>
+  </div>

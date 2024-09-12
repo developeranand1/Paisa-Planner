@@ -1,1 +1,37 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital@0;1&display=swap');
+
+*{
+    font-family: "Mulish", system-ui;
+    padding: 0px;
+    box-sizing: border-box;
+    margin: 0px;
+  
+}
+
+:root{
+    --blue:#2563EB;
+    --black:#000;
+    --white:#fff;
+    --bg:#F3F4F6;
+    --bg-next:#EFF6FF;
+    --dashboard-bg:#B6CDFD;
+}
+
+.form-control:focus {
+    color: var(--bs-body-color);
+    background-color: var(--bs-body-bg);
+    border-color: var(--blue);
+    outline: 0;
+    box-shadow: none
+}
+
+.add-title {
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 30px;
+    margin-block: 20px;
+}
+
+th {
+    font-size: 11px;
+}

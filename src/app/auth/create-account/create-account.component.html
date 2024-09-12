@@ -1,0 +1,67 @@
+<section>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="left-side">
+            <div class="paisa-planner-title">Paisa Planner</div>
+            <img class="planner-img" src="../../../assets/images/user/create.png" alt="">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="right-side">
+            <div class="create-title">Create your Account</div>
+            <div class="create-about">See your growth and get Paisa Planner</div>
+            
+            <form [formGroup]="createForm" (ngSubmit)="onCreate()">
+              <div class="form-section">
+                <label class="form-label" for="firstName">First Name <span>*</span></label>
+                <input class="form-control" formControlName="firstName" type="text" placeholder="First Name">
+                <div *ngIf="createForm.get('firstName')?.invalid && createForm.get('firstName')?.touched" class="error-message">
+                  First Name is required
+                </div>
+              </div>
+  
+              <div class="form-section">
+                <label class="form-label" for="lastName">Last Name <span>*</span></label>
+                <input class="form-control" formControlName="lastName" type="text" placeholder="Last Name">
+                <div *ngIf="createForm.get('lastName')?.invalid && createForm.get('lastName')?.touched" class="error-message">
+                  Last Name is required
+                </div>
+              </div>
+  
+              <div class="form-section">
+                <label class="form-label" for="email">Email <span>*</span></label>
+                <input class="form-control" formControlName="email" type="email" placeholder="Email">
+                <div *ngIf="createForm.get('email')?.invalid && createForm.get('email')?.touched" class="error-message">
+                  Please enter a valid email address
+                </div>
+              </div>
+  
+              <div class="form-section">
+                <label class="form-label" for="phone">Phone No <span>*</span></label>
+                <input class="form-control" formControlName="phone" type="text" placeholder="Phone No.">
+                <div *ngIf="createForm.get('phone')?.invalid && createForm.get('phone')?.touched" class="error-message">
+                  Please enter a valid phone number
+                </div>
+              </div>
+  
+              <div class="form-section">
+                <button class="create-btn" type="submit" [disabled]="createForm.invalid">Create Account</button>
+              </div>
+            </form>
+  
+            <div class="text-center">
+              By signing up, you agree to our Terms and Privacy Policy.
+            </div>
+            <div class="text-center">
+              Your data is safe and secure with us.
+              <div>
+                <a routerLink="/"><i class="fa-solid fa-arrow-left"></i> Back To Home</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  

@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="contact-us">
+               Our Free Tool to Use
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3" *ngFor="let item of toolList">
+            <div class="card mt-4" >
+                <img [src]="item.image" class="card-img-top" [alt]="item.title">
+                <div class="card-body">
+                  <h5 class="card-title"><strong>{{item.title}}</strong></h5>
+                  <p class="card-text">{{item.use}}</p>
+                  <a [href]="item.website" class="btn btn-dark" target="_blank">view more <i
+                    class="fa-solid fa-arrow-right"></i></a>
+                </div>
+              </div>
+        </div>
+       
+    </div>
+</div>

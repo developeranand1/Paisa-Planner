@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="contact-us">
+                Reviews
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3" *ngFor="let item of reviewList">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <div class="d-flex align-items-center">
+                        <img class="user-profile-img" [src]="item.image" [alt]="item?.user">
+                        <div class="mx-2">
+                            <div><strong>{{item?.user}}</strong></div>
+                            <div>⭐⭐⭐⭐⭐</div>
+                        </div>
+                    </div>
+                    <p class="card-text"><q> {{item?.review}} </q> </p>
+                    <a [href]="item.link" target="_blank" class="social-media-links" ><i
+                    class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+      
+          
+    </div>
+</div>

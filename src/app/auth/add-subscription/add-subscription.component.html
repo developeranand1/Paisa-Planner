@@ -1,0 +1,82 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="add-title ">
+            Manage Subscription
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <div class="card text-bg-info">
+            <div class="card-body">
+                <h5 class="card-title">Total Subscriptions</h5>
+                <p class="card-text">1</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card text-bg-warning">
+            <div class="card-body">
+                <h5 class="card-title">Total Amount</h5>
+                <p class="card-text">₹33.00</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <button class="btn btn-primary my-3" data-bs-toggle="modal" data-bs-target="#exampleModal3">+ Add Subscription</button>
+    </div>
+</div>
+
+<app-subscription-list/>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel3" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Add Subscription</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+     <div class="modal-body">
+        <form [formGroup]="subscriptionForm" (ngSubmit)="addSubscription()">
+            <div class="mb-2">
+                <label class="form-label">Name <span>*</span></label>
+                <input type="text" class="form-control" formControlName="name">
+            </div>
+             <div class="mb-2">
+                <label class="form-label">Amount <span>*</span></label>
+                <input type="text" class="form-control" formControlName="amount">
+            </div>
+            <div class="mb-2">
+                <label class="form-label">Frequency <span>*</span></label>
+                <input type="text" class="form-control" formControlName="frequency">
+            </div>
+
+            <div class="mb-2">
+                <label class="form-label">Next Due Date <span>*</span></label>
+
+      <input type="text" class="form-control" formControlName="nextDueDate">
+            </div>
+
+            <div class="mb-2">
+                <label class="form-label">Category <span>*</span></label>
+                <select class="form-control" formControlName="category" >
+                    <option *ngFor="let item of categoryList" [value]="item.name" >{{item.name}}</option>
+                </select>
+               
+            </div>
+            
+            <div class="">
+                <button type="submit" class="btn btn-primary form-control">Add Subscriptions</button>
+            </div>
+        </form>
+      </div>
+      
+    </div>
+  </div>
+</div>

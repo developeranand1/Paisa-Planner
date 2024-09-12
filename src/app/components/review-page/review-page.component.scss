@@ -1,0 +1,40 @@
+
+
+.contact-us{
+    margin: 20px 0px 10px 0px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+img.user-profile-img {
+    margin-right: 10px;
+    width: 42px;
+    border-radius: 50%;
+    border: 1px solid var(--blue);
+    padding: 3px;
+}
+
+p.card-text {
+    margin: 7px 0px 0px 0px;
+    font-size: 14px;
+    font-weight: 600;
+    color: darkgray;
+}
+
+
+strong{
+    color: var(--blue);
+}
+
+.card {
+    border-radius: 29px;
+    background: #fff;
+    border: 1px solid var(--blue);
+}
+
+a.social-media-links {
+    float: right;
+    cursor: pointer;
+}

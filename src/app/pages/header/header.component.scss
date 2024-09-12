@@ -1,0 +1,28 @@
+.main-header {
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--blue);
+    color: var(--white);
+}
+
+span.material-symbols-outlined {
+
+    font-size: 15px;
+    padding-right: 7px;
+}
+
+.header-logo {
+    font-size: 21px;
+    font-weight: bold;
+}
+
+button.sign-btn {
+    font-size: 16px;
+    padding: 7px 15px;
+    color: var(--blue);
+    font-family: 900;
+    border-radius: 5px;
+    border: none;
+}
